@@ -34,14 +34,13 @@
                     <input id="cityinput" placeholder="City Name Here">
                     <button id="citysubmit" type="button">
                         Submit
-                        <!-- button type? -->
                     </button>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="container float-left callout" style="max-width:66%; text-align: center; margin-top: 20px">
+    <div class="container float-left callout" style="max-width:67%; text-align: center; margin-top: 20px">
         <div class="row" style="margin-top: 10px">
             <div class="col-md-12">
                 <h3 id="citydate"></h3>
@@ -56,11 +55,65 @@
             </p>
             <p class="col-md-12" id="windspeed">
             </p>
-            <p class="col-md-12" id="uvindex">
+            <p class="col-md-12 callout" id="uvindex">
             </p>
         </div>
+        <div class="row">
+            <h4 class="col-md-12" style="margin-bottom: 20px">5-Day Forecast:</h4>
+        </div>
+        <div class="row d-flex justify-content-around" style="margin-bottom: 20px">
+            <div class="col-md-2 card bg-primary" style="width: 18rem; text-align: center">
+                <div>
+                    <h5 id="date1" style="margin-top: 10px; color: white"></h5>
+                </div>
+                <ul class="list-group list-group-flush" style="color: white">
+                    <li class="list-group-item bg-primary"><img id="icon1"></li>
+                    <li class="list-group-item bg-primary" id="temp1"></li>
+                    <li class="list-group-item bg-primary" id="hum1"></li>
+                </ul>
+            </div>
+            <div class="col-md-2 card bg-primary" style="width: 18rem; text-align: center">
+                <div>
+                    <h5 id="date2" style="margin-top: 10px; color: white"></h5>
+                </div>
+                <ul class="list-group list-group-flush" style="color: white">
+                    <li class="list-group-item bg-primary"><img id="icon2"></li>
+                    <li class="list-group-item bg-primary" id="temp2"></li>
+                    <li class="list-group-item bg-primary" id="hum2"></li>
+                </ul>
+            </div>
+            <div class="col-md-2 card bg-primary" style="width: 18rem; text-align: center">
+                <div>
+                    <h5 id="date3" style="margin-top: 10px; color: white"></h5>
+                </div>
+                <ul class="list-group list-group-flush" style="color: white">
+                    <li class="list-group-item bg-primary"><img id="icon3"></li>
+                    <li class="list-group-item bg-primary" id="temp3"></li>
+                    <li class="list-group-item bg-primary" id="hum3"></li>
+                </ul>
+            </div>
+            <div class="col-md-2 card bg-primary" style="width: 18rem; text-align: center">
+                <div>
+                    <h5 id="date4" style="margin-top: 10px; color: white"></h5>
+                </div>
+                <ul class="list-group list-group-flush" style="color: white">
+                    <li class="list-group-item bg-primary"><img id="icon4"></li>
+                    <li class="list-group-item bg-primary" id="temp4"></li>
+                    <li class="list-group-item bg-primary" id="hum4"></li>
+                </ul>
+            </div>
+            <div class="col-md-2 card bg-primary" style="width: 18rem; text-align: center">
+                <div>
+                    <h5 id="date5" style="margin-top: 10px; color: white"></h5>
+                </div>
+                <ul class="list-group list-group-flush" style="color: white">
+                    <li class="list-group-item bg-primary"><img id="icon5"></li>
+                    <li class="list-group-item bg-primary" id="temp5"></li>
+                    <li class="list-group-item bg-primary" id="hum5"></li>
+                </ul>
+            </div>
+        </div>
     </div>
-
 
 
     <div id="cities">
