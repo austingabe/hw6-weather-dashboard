@@ -1,3 +1,4 @@
+/* Adding border to displays */
 .callout {
     border: 1px solid gray;
     border-radius: 5px;

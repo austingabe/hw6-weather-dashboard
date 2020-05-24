@@ -7,8 +7,6 @@
     <title>Weather Dashboard</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -22,10 +20,11 @@
 </head>
 
 <body>
+    <!-- Header -->
     <nav class="navbar-light" style="background-color: #e3f2fd; padding: 20px">
         <h1 style="text-align: center">Weather Dashboard</h1>
     </nav>
-
+    <!-- Container with search input and button as well as appended city search history -->
     <div class="container float-left" style="max-width:33%; margin-top: 15px">
         <div class="row">
             <div class="col-md-12">
@@ -38,16 +37,25 @@
                 </form>
             </div>
         </div>
+        <div class="row">
+            <!-- Unordered list to which list elements are appended on each search submission -->
+            <ul class="col-md-6 list-group d-flex justify-content-around" id="searchhistory"
+                style="margin-top: 15px; margin-left: 15px">
+            </ul>
+        </div>
     </div>
-
+    <!-- Container with current and future weather conditions of searched city -->
     <div class="container float-left callout" style="max-width:67%; text-align: center; margin-top: 20px">
         <div class="row" style="margin-top: 10px">
             <div class="col-md-12">
+                <!-- Current date -->
                 <h3 id="citydate"></h3>
+                <!-- Icon representing current weather conditions -->
                 <img id="currenticon" style="max-height: 100px; width: auto">
             </div>
         </div>
         <br>
+        <!-- Row containing current weather condition details -->
         <div class="row">
             <p class="col-md-12" id="temperature">
             </p>
@@ -61,11 +69,13 @@
         <div class="row">
             <h4 class="col-md-12" style="margin-bottom: 20px">5-Day Forecast:</h4>
         </div>
+        <!-- Row containing the five-day forecast cards -->
         <div class="row d-flex justify-content-around" style="margin-bottom: 20px">
             <div class="col-md-2 card bg-primary" style="width: 18rem; text-align: center">
                 <div>
                     <h5 id="date1" style="margin-top: 10px; color: white"></h5>
                 </div>
+                <!-- List containing forecast details -->
                 <ul class="list-group list-group-flush" style="color: white">
                     <li class="list-group-item bg-primary"><img id="icon1"></li>
                     <li class="list-group-item bg-primary" id="temp1"></li>
@@ -114,54 +124,6 @@
             </div>
         </div>
     </div>
-
-
-    <div id="cities">
-    </div>
-
-
-
-
-    <!--
-When search is made in form input
-Then current and future conditions for that city show up
-    Current conditions include:
-    1. city name
-    2. date (Date.now)
-    3. icon representing weather conditions
-    4. temperature
-    5. humidity
-    6. wind speed
-    7. UV index - should be represented with a color that shows favorable(green), moderate (yellow), or severe (red) conditions
-
-    Future conditions include:
-    1. 5-day forecast
-        A. Dates
-        B. Icon representing weather conditions
-        C. Temperature
-        Humidity
-
-jquery attribute of value, set value to the name - of the input?
-City is added to search history (local storage)
-When a city in search history is clicked, that city's current and future conditions show up
-When dashboard is opened, the last city's forecast is shown as default
-
-Each input is added to an array
-Loop through the array and dynamically create a button for each
-On click, button will send the city to the API
-Save only city names to local storage, not the info; so each time it's clicked, the info in local storage gets ajax called and info is displayed
-
-Input will do two things: add button and also relay the info
-
-create input box, id="cityinput"
-$("#cityinput").val()    .trim() - push into the array
-.empty() to empty out the div that the array appears in bc it loops each time
-Set value of the button to city's name
-
-parse out the objects
-
--->
-
 </body>
 
 </html>
